@@ -1,0 +1,161 @@
+/* ----- Reseta tudo ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e8f5e9;
+  color: #2e4631;
+  line-height: 1.6;
+}
+
+/* ----- Cabeçalho ----- */
+header {
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  opacity: 0.8;
+}
+
+/* ----- Seção Home ----- */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#home {
+  text-align: center;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #388e3c;
+}
+
+/* ----- Blocos informativos ----- */
+.blocos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.bloco {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  transition: 0.4s;
+  text-align: center;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ----- Tabela de saldo ----- */
+.tabela-saldo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela-saldo th, .tabela-saldo td {
+  padding: 12px;
+  border: 1px solid #c8e6c9;
+  text-align: left;
+}
+
+.tabela-saldo th {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+}
+
+/* ----- Contato ----- */
+.contato-form {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 6px;
+  border: 1px solid #81c784;
+}
+
+.contato-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background-color: #388e3c;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: #2e7d32;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: white;
+}
