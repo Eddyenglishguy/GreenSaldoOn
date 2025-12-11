@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metas — GreenSaldo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================ HEADER ================ -->
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">GreenSaldo</h1>
+
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="transacoes.html">Transações</a>
+        <a href="metas.html" class="ativo">Metas</a>
+        <a href="configuracoes.html">Configurações</a>
+        <button class="btn-login">Entrar</button>
+      </nav>
+
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+
+  <!-- ================ CONTEÚDO ================ -->
+  <main class="pagina metas">
+
+    <section class="titulo-pagina">
+      <h2>Metas Financeiras</h2>
+      <p>Crie objetivos para organizar melhor sua vida financeira.</p>
+    </section>
+
+    <!-- ======== FORMULÁRIO PARA NOVA META ======== -->
+    <section class="form-meta">
+      <h3>Criar Nova Meta</h3>
+
+      <form id="formNovaMeta">
+
+        <label>
+          Nome da Meta:
+          <input type="text" id="nomeMeta" placeholder="Ex: Comprar um celular, Viagem, Reserva..." required>
+        </label>
+
+        <label>
+          Valor necessário:
+          <input type="number" id="valorMeta" step="0.01" placeholder="Ex: 1500" required>
+        </label>
+
+        <label>
+          Data limite:
+          <input type="date" id="dataMeta" required>
+        </label>
+
+        <button type="submit" class="btn-enviar">
+          🎯 Criar Meta
+        </button>
+
+      </form>
+    </section>
+
+
+    <!-- ======== METAS ATIVAS ======== -->
+    <section class="metas-ativas">
+      <h3>Metas Ativas</h3>
+
+      <ul id="listaMetasAtivas" class="lista-metas">
+        <!-- Metas adicionadas pelo JS -->
+
+        <!-- Exemplo de estrutura que o JS vai replicar -->
+        <!--
+        <li class="meta-item">
+          <div class="meta-info">
+            <h4>Comprar Notebook</h4>
+            <p>Total: R$ 3000 • Restam: R$ 1800</p>
+          </div>
+
+          <div class="meta-progresso">
+            <div class="barra">
+              <div class="progresso" style="width: 40%;"></div>
+            </div>
+            <span>40%</span>
+          </div>
+
+          <button class="btn-concluir">Concluir</button>
+        </li>
+        -->
+      </ul>
+    </section>
+
+
+    <!-- ======== METAS CONCLUÍDAS ======== -->
+    <section class="metas-concluidas">
+      <h3>Metas Concluídas</h3>
+
+      <ul id="listaMetasConcluidas" class="lista-metas concluidas">
+        <!-- JS insere aqui -->
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
