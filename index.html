@@ -5,89 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GreenSaldo — Recepção</title>
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header class="topbar">
-  <h1>GreenSaldo</h1>
-  <p>Controle financeiro simples, rápido e direto ao ponto.</p>
-</header>
+<div class="layout">
 
-<main class="container">
-
-  <!-- Boas-vindas -->
-  <section class="welcome">
-    <h2>Bem-vindo à Recepção</h2>
-    <p>
-      Aqui você acessa todas as áreas importantes do sistema.  
-      Escolha uma das opções abaixo para começar a navegar.
-    </p>
-  </section>
-
-  <!-- Acesso rápido -->
-  <section class="quick-access">
-    <h3>Acesso Rápido</h3>
-
-    <div class="access-grid">
-
-      <a href="index.html" class="access-card">
-        <i class="fa-solid fa-home"></i>
-        Página Inicial
-      </a>
-
-      <a href="app.html" class="access-card">
-        <i class="fa-solid fa-wallet"></i>
-        App Financeiro
-      </a>
-
-      <a href="sobre.html" class="access-card">
-        <i class="fa-solid fa-circle-info"></i>
-        Sobre o Projeto
-      </a>
-
-      <a href="contato.html" class="access-card">
-        <i class="fa-solid fa-envelope"></i>
-        Contato
-      </a>
-
-      <a href="adicional.html" class="access-card">
-        <i class="fa-solid fa-layer-group"></i>
-        Página Adicional
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Cards principais -->
-  <section class="main-cards">
-    <div class="card">
-      <h3>Gerenciamento rápido</h3>
-      <p>Acesse suas transações, entradas, saídas e histórico.</p>
-      <a href="app.html" class="btn">Ir para o App</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">GS</div>
+      <div>
+        <h1>GreenSaldo</h1>
+        <p>Seu controle financeiro moderno</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Conheça o GreenSaldo</h3>
-      <p>Saiba por que criamos este projeto e como ele funciona.</p>
-      <a href="sobre.html" class="btn">Ler mais</a>
-    </div>
+    <nav class="menu">
+      <a href="index.html"><i class="fa-solid fa-door-open"></i> Recepção</a>
+      <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+      <a href="blog.html"><i class="fa-solid fa-pen-nib"></i> Blog</a>
+      <a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+      <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+      <a href="contato.html"><i class="fa-solid fa-envelope"></i> Contato</a>
+    </nav>
+  </aside>
 
-    <div class="card">
-      <h3>Precisa falar com nós?</h3>
-      <p>Entre em contato rapidamente pelo formulário oficial.</p>
-      <a href="contato.html" class="btn">Contato</a>
-    </div>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-</main>
+    <section class="welcome-card glass">
+      <h2>Bem-vindo ao GreenSaldo</h2>
+      <p>Gerencie seu dinheiro de forma simples, bonita e eficiente.</p>
+    </section>
 
-<footer class="footer">
-  <p>© 2025 GreenSaldo — Todos os direitos reservados.</p>
-</footer>
+    <section class="quick-grid">
+
+      <a href="dashboard.html" class="quick-card glass">
+        <i class="fa-solid fa-chart-simple"></i>
+        <h3>Dashboard</h3>
+        <p>Veja seus números e movimentações.</p>
+      </a>
+
+      <a href="blog.html" class="quick-card glass">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Blog</h3>
+        <p>Dicas e conteúdos sobre finanças.</p>
+      </a>
+
+      <a href="faq.html" class="quick-card glass">
+        <i class="fa-solid fa-question"></i>
+        <h3>FAQ</h3>
+        <p>Perguntas e respostas úteis.</p>
+      </a>
+
+      <a href="configuracoes.html" class="quick-card glass">
+        <i class="fa-solid fa-sliders"></i>
+        <h3>Configurações</h3>
+        <p>Personalize sua experiência.</p>
+      </a>
+
+    </section>
+
+    <footer class="footer">
+      © 2025 GreenSaldo — Todos os direitos reservados.
+    </footer>
+
+  </main>
+</div>
 
 </body>
 </html>
