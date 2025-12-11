@@ -1,90 +1,93 @@
-!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <titl<e>GreenSaldo — Controle simples do seu dinheiro</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="GreenSaldo — um site inicial elegante para controlar saldo e pequenas despesas.">
-  <style>
-    :root{
-      --bg:#f5f7fb;
-      --card:#ffffff;
-      --muted:#64748b;
-      --accent:#16a34a; /* verde */
-      --accent-2:#059669;
-      --glass: rgba(255,255,255,0.7);
-      --shadow: 0 8px 24px rgba(18,38,61,0.08);
-      --radius:16px;
-      color-scheme: light;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    [data-theme='dark']{
-      --bg:#071022;
-      --card:#072033;
-      --muted:#9aa9bf;
-      --accent:#34d399;
-      --accent-2:#10b981;
-      --glass: rgba(255,255,255,0.03);
-      --shadow: 0 8px 30px rgba(0,0,0,0.6);
-      color-scheme: dark;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenSaldo — Recepção</title>
+  <link rel="stylesheet" href="styles.css">
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(22,163,74,0.06), transparent), radial-gradient(900px 500px at 90% 90%, rgba(6,95,70,0.04), transparent), var(--bg);
-      padding:32px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      gap:24px;
-      font-size:16px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-    .container{
-      width:100%;
-      max-width:1100px;
-      display:grid;
-      grid-template-columns: 360px 1fr;
-      gap:24px;
-      align-items:start;
-    }
+<body>
 
-    /* SIDEBAR */
-    .sidebar{
-      position:sticky; top:32px;
-      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.02));
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,0.04);
-      min-height:420px;
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
+<header class="topbar">
+  <h1>GreenSaldo</h1>
+  <p>Controle financeiro simples, rápido e direto ao ponto.</p>
+</header>
 
-    .brand{
-      display:flex;gap:12px;align-items:center
-    }
-    .logo{
-      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(16,185,129,0.18);
-    }
-    .brand h1{font-size:18px;margin:0}
-    .brand p{font-size:13px;margin:0;color:var(--muted)}
+<main class="container">
 
-    .balance-card{
-      background:var(--card);
-      padding:14px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px
-    }
-    .balance-row{display:flex;justify-content:space-between;align-items:center}
-    .amount{font-size:28px;font-weight:700}
-    .sub{font-size:13px;color:var(--muted)}
+  <!-- Boas-vindas -->
+  <section class="welcome">
+    <h2>Bem-vindo à Recepção</h2>
+    <p>
+      Aqui você acessa todas as áreas importantes do sistema.  
+      Escolha uma das opções abaixo para começar a navegar.
+    </p>
+  </section>
 
-    .actions{display:flex;gap:8px}
-    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+  <!-- Acesso rápido -->
+  <section class="quick-access">
+    <h3>Acesso Rápido</h3>
+
+    <div class="access-grid">
+
+      <a href="index.html" class="access-card">
+        <i class="fa-solid fa-home"></i>
+        Página Inicial
+      </a>
+
+      <a href="app.html" class="access-card">
+        <i class="fa-solid fa-wallet"></i>
+        App Financeiro
+      </a>
+
+      <a href="sobre.html" class="access-card">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre o Projeto
+      </a>
+
+      <a href="contato.html" class="access-card">
+        <i class="fa-solid fa-envelope"></i>
+        Contato
+      </a>
+
+      <a href="adicional.html" class="access-card">
+        <i class="fa-solid fa-layer-group"></i>
+        Página Adicional
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Cards principais -->
+  <section class="main-cards">
+    <div class="card">
+      <h3>Gerenciamento rápido</h3>
+      <p>Acesse suas transações, entradas, saídas e histórico.</p>
+      <a href="app.html" class="btn">Ir para o App</a>
+    </div>
+
+    <div class="card">
+      <h3>Conheça o GreenSaldo</h3>
+      <p>Saiba por que criamos este projeto e como ele funciona.</p>
+      <a href="sobre.html" class="btn">Ler mais</a>
+    </div>
+
+    <div class="card">
+      <h3>Precisa falar com nós?</h3>
+      <p>Entre em contato rapidamente pelo formulário oficial.</p>
+      <a href="contato.html" class="btn">Contato</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2025 GreenSaldo — Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
