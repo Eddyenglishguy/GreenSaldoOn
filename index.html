@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenSaldo — Início</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Início</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- =============== MENU LATERAL =============== -->
+<div class="app">
+
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <h2>GreenSaldo</h2>
-    </div>
-
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
     <nav class="sidebar-nav">
-      <a href="index.html" class="active">Início</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="transacoes.html">Transações</a>
-      <a href="metas.html">Metas</a>
-      <a href="configuracoes.html">Configurações</a>
-      <a href="conta.html">Minha Conta</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+      <a href="index.html" class="active"><span>Início</span></a>
+      <a href="dashboard.html"><span>Dashboard</span></a>
+      <a href="transacoes.html"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html"><span>Configurações</span></a>
+      <a href="conta.html"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html"><span>Contato</span></a>
     </nav>
-
-    <button class="toggle-btn" id="toggleBtn">
-      ☰
-    </button>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
   </aside>
 
-
-  <!-- =============== ÁREA PRINCIPAL =============== -->
+  <!-- MAIN -->
   <main class="main">
+    <div class="breadcrumb">Início</div>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-      Início
-    </div>
-
-    <!-- CONTEÚDO PRINCIPAL -->
     <section class="page-header">
       <h1>Bem-vindo ao GreenSaldo</h1>
-      <p>Gerencie suas finanças com clareza, organização e eficiência. Aqui você acompanha saldo, metas, 
-      gastos, entradas e relatórios detalhados com simplicidade.</p>
+      <p>Gerencie suas finanças com clareza, organização e eficiência. Acompanhe saldo, metas, gastos e relatórios detalhados.</p>
     </section>
 
-    <section class="cards-home">
-
+    <section class="grid">
       <div class="card">
         <h3>Dashboard Geral</h3>
-        <p>Resumo completo das suas finanças: saldo, gráficos, evolução mensal e principais indicadores.</p>
+        <p>Resumo completo das suas finanças, gráficos de evolução e indicadores de desempenho.</p>
         <a href="dashboard.html" class="btn">Acessar</a>
       </div>
-
       <div class="card">
         <h3>Transações</h3>
-        <p>Registre ganhos, gastos, categorias e filtros inteligentes. Controle absoluto do seu dinheiro.</p>
+        <p>Registre e acompanhe ganhos, gastos e categorias de forma simples e organizada.</p>
         <a href="transacoes.html" class="btn">Acessar</a>
       </div>
-
       <div class="card">
         <h3>Metas Financeiras</h3>
-        <p>Crie objetivos, acompanhe progresso e visualize o caminho até cada meta.</p>
+        <p>Defina objetivos e visualize seu progresso mês a mês.</p>
         <a href="metas.html" class="btn">Acessar</a>
       </div>
-
       <div class="card">
         <h3>Configurações</h3>
-        <p>Personalize tema, notificações, segurança e preferências da sua conta.</p>
+        <p>Personalize tema, notificações e preferências da sua conta.</p>
         <a href="configuracoes.html" class="btn">Acessar</a>
       </div>
-
     </section>
 
   </main>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
