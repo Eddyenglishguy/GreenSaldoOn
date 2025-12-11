@@ -1,96 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Configurações - GreenSaldo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Configurações</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="app">
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <div class="logo">GreenSaldo</div>
-
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="configuracoes.html" class="ativo">Configurações</a>
-      <a href="conta.html">Conta</a>
-      <button class="btn-login">Sair</button>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span>Início</span></a>
+      <a href="dashboard.html"><span>Dashboard</span></a>
+      <a href="transacoes.html"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html" class="active"><span>Configurações</span></a>
+      <a href="conta.html"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html"><span>Contato</span></a>
     </nav>
-  </header>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+  </aside>
 
-  <main class="pagina-config">
+  <!-- MAIN -->
+  <main class="main">
+    <div class="breadcrumb"><a href="index.html" class="btn-back">← Início</a> › Configurações</div>
 
-    <h1>Configurações</h1>
-    <p class="descricao">Personalize a forma como o GreenSaldo funciona para você.</p>
-
-    <!-- Seção 1: Preferências -->
-    <section class="config-box">
-      <h2>Preferências Gerais</h2>
-
-      <label class="config-item">
-        <span>Tema do Site</span>
-        <select>
-          <option value="claro">Claro</option>
-          <option value="escuro">Escuro</option>
-        </select>
-      </label>
-
-      <label class="config-item">
-        <span>Idioma</span>
-        <select>
-          <option>Português (BR)</option>
-          <option>Inglês (EN)</option>
-        </select>
-      </label>
-
-      <label class="config-item">
-        <span>Moeda Padrão</span>
-        <select>
-          <option>R$ - Real Brasileiro</option>
-          <option>$ - Dólar</option>
-          <option>€ - Euro</option>
-        </select>
-      </label>
+    <section class="page-header">
+      <h1>Configurações</h1>
+      <p>Personalize seu GreenSaldo: tema, notificações, preferências de exibição e idioma.</p>
     </section>
 
-    <!-- Seção 2: Notificações -->
-    <section class="config-box">
-      <h2>Notificações</h2>
+    <section class="grid">
+      <div class="card">
+        <h3>Tema</h3>
+        <form class="form">
+          <select>
+            <option value="light">Claro</option>
+            <option value="dark">Escuro</option>
+          </select>
+        </form>
+      </div>
 
-      <label class="config-check">
-        <input type="checkbox" checked>
-        Receber lembretes de metas
-      </label>
+      <div class="card">
+        <h3>Preferências</h3>
+        <form class="form">
+          <label>
+            <input type="checkbox"> Ativar notificações
+          </label>
+          <label>
+            <input type="checkbox"> Mostrar saldo inicial
+          </label>
+        </form>
+      </div>
 
-      <label class="config-check">
-        <input type="checkbox" checked>
-        Alertas de gastos acima da média
-      </label>
-
-      <label class="config-check">
-        <input type="checkbox">
-        Relatório semanal por e-mail
-      </label>
+      <div class="card">
+        <h3>Idioma</h3>
+        <form class="form">
+          <select>
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+          </select>
+        </form>
+      </div>
     </section>
-
-    <!-- Seção 3: Segurança -->
-    <section class="config-box">
-      <h2>Segurança</h2>
-
-      <button class="btn-alterar">Alterar senha</button>
-      <button class="btn-alterar">Gerenciar dispositivos</button>
-    </section>
-
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 GreenSaldo — Todos os direitos reservados.</p>
-  </footer>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
