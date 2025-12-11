@@ -3,51 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenSaldo - Início</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>GreenSaldo - Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>GreenSaldo</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="app.html">Aplicação</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="adicional.html">Adicional</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">GreenSaldo</div>
 
-<section id="home">
-  <h2>Bem-vindo ao GreenSaldo</h2>
-  <p>Acompanhe, organize e visualize informações importantes de forma simples e rápida.</p>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <button class="btn-login">Entrar</button>
+    </nav>
+  </header>
 
-  <a href="app.html" class="botao">Acessar Aplicação</a>
-
-  <div class="blocos">
-    <div class="bloco">
-      <h3>Controle</h3>
-      <p>Gerencie operações e veja seus dados facilmente.</p>
+  <!-- Seção Inicial -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Olá! Este é o GreenSaldo — seu painel financeiro rápido e inteligente.</h1>
+      <p>Controle seus gastos, acompanhe metas e organize sua vida financeira com facilidade.</p>
+      <button class="btn-principal">Começar Agora</button>
     </div>
 
-    <div class="bloco">
-      <h3>Rapidez</h3>
-      <p>Acesse tudo de forma intuitiva e sem complicações.</p>
+    <div class="hero-img">
+      <img src="https://i.imgur.com/nWQj0hT.png" alt="Dashboard financeiro">
     </div>
+  </section>
 
-    <div class="bloco">
-      <h3>Organização</h3>
-      <p>Visualize tudo em blocos práticos e leves.</p>
+  <!-- Recursos -->
+  <section id="recursos" class="recursos">
+    <h2>Recursos do GreenSaldo</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Controle de Gastos</h3>
+        <p>Acompanhe entradas e saídas com gráficos claros e fáceis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Metas Financeiras</h3>
+        <p>Defina objetivos e acompanhe o seu progresso.</p>
+      </div>
+
+      <div class="card">
+        <h3>Relatórios Inteligentes</h3>
+        <p>Receba resumos automáticos e insights para melhorar sua vida financeira.</p>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2025 GreenSaldo. Todos os direitos reservados.</p>
-</footer>
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre o GreenSaldo</h2>
+    <p>
+      O GreenSaldo nasceu para simplificar a forma como você cuida do seu dinheiro.
+      Nosso sistema oferece ferramentas modernas e intuitivas para quem quer entender melhor
+      suas finanças e alcançar metas. Feito para pessoas que buscam praticidade, visual limpo
+      e resultados reais.
+    </p>
+  </section>
 
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Fale Conosco</h2>
+    <form class="form-contato">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 GreenSaldo — Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
