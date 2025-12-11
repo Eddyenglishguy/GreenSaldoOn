@@ -1,114 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard — GreenSaldo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="app">
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">GreenSaldo</h1>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span>Início</span></a>
+      <a href="dashboard.html" class="active"><span>Dashboard</span></a>
+      <a href="transacoes.html"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html"><span>Configurações</span></a>
+      <a href="conta.html"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html"><span>Contato</span></a>
+    </nav>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+  </aside>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="dashboard.html" class="ativo">Dashboard</a>
-        <a href="transacoes.html">Transações</a>
-        <a href="metas.html">Metas</a>
-        <a href="configuracoes.html">Configurações</a>
+  <main class="main">
+    <div class="breadcrumb"><a href="index.html" class="btn-back">← Início</a> › Dashboard</div>
 
-        <button class="btn-login">Entrar</button>
-      </nav>
-
-      <button class="menu-toggle">☰</button>
-    </div>
-  </header>
-
-
-  <!-- ================= DASHBOARD ================= -->
-  <main class="dashboard">
-
-    <section class="dashboard-header">
-      <h2>Seu Painel Financeiro</h2>
-      <p>Acompanhe seus gastos, ganhos e saldo em tempo real.</p>
+    <section class="page-header">
+      <h1>Dashboard</h1>
+      <p>Acompanhe suas finanças em tempo real, visualize saldo, despesas, receitas e gráficos de evolução mensal.</p>
     </section>
 
-    <!-- ======== CARDS PRINCIPAIS ======== -->
-    <section class="cards-grid">
-
-      <div class="card saldo">
+    <section class="grid">
+      <div class="card">
         <h3>Saldo Atual</h3>
-        <p class="valor verde">R$ 2.350,00</p>
+        <p>R$ 0,00</p>
       </div>
-
-      <div class="card ganhos">
-        <h3>Ganhos do Mês</h3>
-        <p class="valor azul">R$ 5.120,00</p>
+      <div class="card">
+        <h3>Receitas Mensais</h3>
+        <p>R$ 0,00</p>
       </div>
-
-      <div class="card despesas">
-        <h3>Despesas do Mês</h3>
-        <p class="valor vermelho">R$ 2.770,00</p>
+      <div class="card">
+        <h3>Despesas Mensais</h3>
+        <p>R$ 0,00</p>
       </div>
-
-    </section>
-
-    <!-- ======== GRÁFICO (placeholder) ======== -->
-    <section class="grafico">
-      <h3>Resumo Mensal</h3>
-      <div class="grafico-box">
-        <p>📊 Aqui aparecerá o gráfico (pode ser feito no JS depois).</p>
+      <div class="card">
+        <h3>Evolução</h3>
+        <canvas id="chart" style="width:100%;height:150px;"></canvas>
       </div>
     </section>
-
-
-    <!-- ======== ÚLTIMAS TRANSAÇÕES ======== -->
-    <section class="transacoes-recentes">
-      <h3>Últimas Transações</h3>
-
-      <ul class="lista-transacoes">
-
-        <li class="item">
-          <span>💵 Salário</span>
-          <span class="ganho">+ R$ 3.000</span>
-        </li>
-
-        <li class="item">
-          <span>🍔 Lanche</span>
-          <span class="gasto">- R$ 28</span>
-        </li>
-
-        <li class="item">
-          <span>🛒 Mercado</span>
-          <span class="gasto">- R$ 215</span>
-        </li>
-
-        <li class="item">
-          <span>🎁 Presente</span>
-          <span class="gasto">- R$ 75</span>
-        </li>
-
-      </ul>
-    </section>
-
-
-    <!-- ======== BOTÕES RÁPIDOS ======== -->
-    <section class="atalhos">
-      <h3>Ações Rápidas</h3>
-
-      <div class="atalhos-flex">
-        <a href="transacoes.html" class="atalho">➕ Nova Transação</a>
-        <a href="metas.html" class="atalho">🎯 Criar Meta</a>
-        <a href="configuracoes.html" class="atalho">⚙️ Ajustar Conta</a>
-      </div>
-    </section>
-
   </main>
 
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
