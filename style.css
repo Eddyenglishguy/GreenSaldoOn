@@ -1,161 +1,265 @@
-/* ----- Reseta tudo ----- */
+/* ============================
+   RESET
+=============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #e8f5e9;
-  color: #2e4631;
-  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
-/* ----- Cabeçalho ----- */
-header {
-  background: linear-gradient(90deg, #4caf50, #2e7d32);
-  padding: 20px 0;
-  color: white;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  position: sticky;
+/* ============================
+   HEADER
+=============================== */
+.header {
+  width: 100%;
+  padding: 18px 40px;
+  position: fixed;
   top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease;
   z-index: 999;
 }
 
-header h1 {
-  font-size: 2rem;
+.header.ativo {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-header nav ul {
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2ecc71;
+}
+
+.nav {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
-  list-style: none;
-  margin-top: 10px;
 }
 
-header nav ul li a {
+.nav a {
   text-decoration: none;
-  color: white;
+  color: #333;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #2ecc71;
+}
+
+.btn-login {
+  padding: 8px 18px;
+  border: 2px solid #2ecc71;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
 }
 
-header nav ul li a:hover {
-  opacity: 0.8;
+.btn-login:hover {
+  background: #2ecc71;
+  color: #fff;
 }
 
-/* ----- Seção Home ----- */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-#home {
-  text-align: center;
-}
-
-.botao {
-  display: inline-block;
-  background-color: #4caf50;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.botao:hover {
-  background-color: #388e3c;
-}
-
-/* ----- Blocos informativos ----- */
-.blocos {
+/* ============================
+   HERO (INÍCIO)
+=============================== */
+.hero {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  justify-content: center;
+  padding: 140px 8%;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.bloco {
-  background: white;
-  width: 300px;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-  transition: 0.4s;
-  text-align: center;
+.hero-text {
+  max-width: 600px;
 }
 
-.bloco:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-/* ----- Tabela de saldo ----- */
-.tabela-saldo {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
 }
 
-.tabela-saldo th, .tabela-saldo td {
-  padding: 12px;
-  border: 1px solid #c8e6c9;
-  text-align: left;
-}
-
-.tabela-saldo th {
-  background-color: #a5d6a7;
-  color: #1b5e20;
-}
-
-/* ----- Contato ----- */
-.contato-form {
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: auto;
-}
-
-.contato-form input,
-.contato-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 12px;
-  border-radius: 6px;
-  border: 1px solid #81c784;
-}
-
-.contato-form button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  background-color: #4caf50;
+.btn-principal {
+  padding: 12px 25px;
   border: none;
   border-radius: 8px;
+  background: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
   font-weight: bold;
-  color: white;
   transition: 0.3s;
 }
 
-.contato-form button:hover {
-  background-color: #388e3c;
+.btn-principal:hover {
+  background: #27ae60;
 }
 
-/* ----- Footer ----- */
-footer {
-  background-color: #2e7d32;
+.hero-img img {
+  width: 380px;
+}
+
+/* ============================
+   RECURSOS
+=============================== */
+.recursos {
+  padding: 100px 7%;
+  background: #fff;
+}
+
+.recursos h2 {
+  font-size: 28px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  color: white;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  background: #fefefe;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.4s ease-out;
+}
+
+.card.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+}
+
+/* ============================
+   SOBRE
+=============================== */
+.sobre {
+  padding: 100px 7%;
+}
+
+.sobre h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 18px;
+  color: #444;
+  max-width: 850px;
+}
+
+/* ============================
+   CONTATO
+=============================== */
+.contato {
+  padding: 100px 7%;
+  background: #f7fff9;
+}
+
+.contato h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-contato textarea {
+  height: 130px;
+  resize: none;
+}
+
+.form-contato button {
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.form-contato button:hover {
+  background: #27ae60;
+}
+
+/* ============================
+   RODAPÉ
+=============================== */
+.footer {
+  padding: 25px;
+  text-align: center;
+  background: #222;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* ============================
+   RESPONSIVIDADE
+=============================== */
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
 }
