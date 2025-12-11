@@ -1,105 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato — GreenSaldo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Contato</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="app">
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">GreenSaldo</h1>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span>Início</span></a>
+      <a href="dashboard.html"><span>Dashboard</span></a>
+      <a href="transacoes.html"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html"><span>Configurações</span></a>
+      <a href="conta.html"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html" class="active"><span>Contato</span></a>
+    </nav>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+  </aside>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="transacoes.html">Transações</a>
-        <a href="metas.html">Metas</a>
-        <a href="configuracoes.html">Configurações</a>
-        <a href="conta.html">Minha Conta</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="contato.html" class="ativo">Contato</a>
-      </nav>
+  <main class="main">
+    <div class="breadcrumb"><a href="index.html" class="btn-back">← Início</a> › Contato</div>
 
-      <button class="menu-toggle">☰</button>
-    </div>
-  </header>
-
-
-  <!-- ================= CONTEÚDO ================= -->
-  <main class="pagina contato">
-
-    <section class="titulo-pagina">
-      <h2>Fale Conosco</h2>
-      <p>Precisa de ajuda? Envie uma mensagem ou consulte nossas informações de suporte.</p>
+    <section class="page-header">
+      <h1>Contato</h1>
+      <p>Entre em contato com a equipe GreenSaldo para suporte, dúvidas ou sugestões. Responderemos o mais rápido possível.</p>
     </section>
 
-
-    <!-- ======== CONTATO + FORMULÁRIO ======== -->
-    <div class="contato-flex">
-
-      <!-- ======== FORMULÁRIO ======== -->
-      <section class="form-contato">
-        <h3>Enviar Mensagem</h3>
-
-        <form id="formContato">
-
-          <label>
-            Nome:
-            <input type="text" id="contatoNome" placeholder="Seu nome" required>
-          </label>
-
-          <label>
-            Email:
-            <input type="email" id="contatoEmail" placeholder="Seu email" required>
-          </label>
-
-          <label>
-            Assunto:
-            <input type="text" id="contatoAssunto" placeholder="Assunto da mensagem" required>
-          </label>
-
-          <label>
-            Mensagem:
-            <textarea id="contatoMensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
-          </label>
-
-          <button type="submit" class="btn-enviar">
-            📩 Enviar Mensagem
-          </button>
-
+    <section class="grid">
+      <div class="card card-large">
+        <h3>Formulário de Contato</h3>
+        <form class="form">
+          <input type="text" placeholder="Nome">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Mensagem"></textarea>
+          <button class="btn-primary">Enviar Mensagem</button>
         </form>
-      </section>
+      </div>
 
-
-      <!-- ======== INFORMAÇÕES DE SUPORTE ======== -->
-      <section class="info-contato">
-        <h3>Informações de Suporte</h3>
-
-        <p>Você também pode entrar em contato pelos canais abaixo:</p>
-
-        <ul class="lista-contato">
-          <li>📧 Email: suporte@greensaldo.com</li>
-          <li>📱 WhatsApp: (00) 90000-0000</li>
-          <li>🌐 Site: www.greensaldo.com/suporte</li>
-        </ul>
-
-        <div class="caixa-mapa">
-          <p>📍 Localização (exemplo)</p>
-          <div class="mapa-falso">
-            Mapa / localização da empresa apareceria aqui
-          </div>
-        </div>
-      </section>
-
-    </div>
+      <div class="card">
+        <h3>Informações</h3>
+        <p>Email: suporte@greensaldo.com</p>
+        <p>Telefone: +55 11 99999-9999</p>
+        <p>Endereço: Av. Exemplo, 123 - São Paulo, SP</p>
+      </div>
+    </section>
 
   </main>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
