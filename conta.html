@@ -1,130 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Conta — GreenSaldo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Minha Conta</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="app">
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">GreenSaldo</h1>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span>Início</span></a>
+      <a href="dashboard.html"><span>Dashboard</span></a>
+      <a href="transacoes.html"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html"><span>Configurações</span></a>
+      <a href="conta.html" class="active"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html"><span>Contato</span></a>
+    </nav>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+  </aside>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="transacoes.html">Transações</a>
-        <a href="metas.html">Metas</a>
-        <a href="configuracoes.html">Configurações</a>
-        <a href="conta.html" class="ativo">Minha Conta</a>
-        <button class="btn-login">Entrar</button>
-      </nav>
+  <main class="main">
+    <div class="breadcrumb"><a href="index.html" class="btn-back">← Início</a> › Minha Conta</div>
 
-      <button class="menu-toggle">☰</button>
-    </div>
-  </header>
-
-
-  <!-- ================= CONTEÚDO ================= -->
-  <main class="pagina conta">
-
-    <section class="titulo-pagina">
-      <h2>Minha Conta</h2>
-      <p>Gerencie suas informações pessoais e preferências.</p>
+    <section class="page-header">
+      <h1>Minha Conta</h1>
+      <p>Gerencie informações da sua conta, altere senha, email e configure autenticação.</p>
     </section>
 
-    <!-- ======== CARD DO USUÁRIO ======== -->
-    <section class="card-usuario">
-      <img src="https://via.placeholder.com/120" class="foto-perfil" alt="Foto do usuário">
-
-      <div class="dados-usuario">
-        <h3 id="nomeUsuario">Usuário Exemplo</h3>
-        <p id="emailUsuario">email@exemplo.com</p>
-
-        <button class="btn-editar" id="editarPerfil">Editar Perfil</button>
-      </div>
-    </section>
-
-
-    <!-- ======== EDITAR PERFIL ======== -->
-    <section class="editar-info">
-      <h3>Informações da Conta</h3>
-
-      <form id="formEditarPerfil">
-
-        <label>
-          Nome:
-          <input type="text" id="inputNomeUsuario" placeholder="Seu nome">
-        </label>
-
-        <label>
-          Email:
-          <input type="email" id="inputEmailUsuario" placeholder="Seu email">
-        </label>
-
-        <button type="submit" class="btn-enviar">
-          Salvar Alterações
-        </button>
-
-      </form>
-    </section>
-
-
-    <!-- ======== ALTERAR SENHA ======== -->
-    <section class="senha-box">
-      <h3>Alterar Senha</h3>
-
-      <form id="formAlterarSenha">
-
-        <label>
-          Senha Atual:
-          <input type="password" id="senhaAtual">
-        </label>
-
-        <label>
-          Nova Senha:
-          <input type="password" id="novaSenha">
-        </label>
-
-        <label>
-          Confirmar Nova Senha:
-          <input type="password" id="confirmarNovaSenha">
-        </label>
-
-        <button type="submit" class="btn-enviar">
-          Atualizar Senha
-        </button>
-
-      </form>
-    </section>
-
-
-    <!-- ======== PREFERÊNCIAS ======== -->
-    <section class="preferencias">
-      <h3>Preferências</h3>
-
-      <div class="preferencia-item">
-        <span>Tema Escuro</span>
-        <input type="checkbox" id="temaEscuro">
+    <section class="grid">
+      <div class="card">
+        <h3>Informações Pessoais</h3>
+        <form class="form">
+          <input type="text" placeholder="Nome completo">
+          <input type="email" placeholder="Email">
+          <button class="btn-primary">Atualizar</button>
+        </form>
       </div>
 
-      <div class="preferencia-item">
-        <span>Notificações Ativadas</span>
-        <input type="checkbox" id="notificacoes">
+      <div class="card">
+        <h3>Senha</h3>
+        <form class="form">
+          <input type="password" placeholder="Senha atual">
+          <input type="password" placeholder="Nova senha">
+          <button class="btn-primary">Alterar Senha</button>
+        </form>
       </div>
 
-      <div class="preferencia-item">
-        <span>Modo de Privacidade</span>
-        <input type="checkbox" id="modoPrivado">
+      <div class="card">
+        <h3>Autenticação</h3>
+        <form class="form">
+          <label><input type="checkbox"> Ativar autenticação de dois fatores</label>
+        </form>
       </div>
     </section>
-
   </main>
 
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
