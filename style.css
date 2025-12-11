@@ -263,3 +263,78 @@ body {
     display: none;
   }
 }
+
+/* ============================
+   PÁGINA CONFIGURAÇÕES
+=============================== */
+
+.pagina-config {
+  padding: 140px 7%;
+}
+
+.pagina-config h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.pagina-config .descricao {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.config-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.config-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #2ecc71;
+}
+
+.config-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.config-item span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.config-item select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.config-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.btn-alterar {
+  padding: 12px 20px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-alterar:hover {
+  background: #27ae60;
+}
