@@ -1,108 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transações — GreenSaldo</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSaldo — Transações</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="app">
 
-  <!-- ================ HEADER ================ -->
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">GreenSaldo</h1>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><h2>GreenSaldo</h2></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span>Início</span></a>
+      <a href="dashboard.html"><span>Dashboard</span></a>
+      <a href="transacoes.html" class="active"><span>Transações</span></a>
+      <a href="metas.html"><span>Metas</span></a>
+      <a href="configuracoes.html"><span>Configurações</span></a>
+      <a href="conta.html"><span>Minha Conta</span></a>
+      <a href="sobre.html"><span>Sobre</span></a>
+      <a href="contato.html"><span>Contato</span></a>
+    </nav>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+  </aside>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="transacoes.html" class="ativo">Transações</a>
-        <a href="metas.html">Metas</a>
-        <a href="configuracoes.html">Configurações</a>
-        <button class="btn-login">Entrar</button>
-      </nav>
+  <!-- MAIN -->
+  <main class="main">
+    <div class="breadcrumb"><a href="index.html" class="btn-back">← Início</a> › Transações</div>
 
-      <button class="menu-toggle">☰</button>
-    </div>
-  </header>
-
-
-  <!-- ================ CONTEÚDO ================ -->
-  <main class="pagina transacoes">
-
-    <section class="titulo-pagina">
-      <h2>Transações</h2>
-      <p>Gerencie seus ganhos e despesas facilmente.</p>
+    <section class="page-header">
+      <h1>Transações</h1>
+      <p>Registre, visualize e filtre todas as suas transações financeiras. Controle completo de gastos e receitas.</p>
     </section>
 
-    <!-- ======== FORMULÁRIO ======== -->
-    <section class="form-transacao">
-      <h3>Adicionar Transação</h3>
+    <section class="grid">
+      <div class="card">
+        <h3>Nova Transação</h3>
+        <form class="form">
+          <div class="form-row">
+            <select class="col"><option>Receita</option><option>Despesa</option></select>
+            <input type="number" placeholder="Valor (R$)" class="col">
+          </div>
+          <input type="text" placeholder="Descrição">
+          <input type="date">
+          <button class="btn-primary">Salvar</button>
+        </form>
+      </div>
 
-      <form id="formNovaTransacao">
-
-        <label>
-          Descrição:
-          <input type="text" id="descricao" placeholder="Ex: Salário, Mercado, Uber..." required>
-        </label>
-
-        <label>
-          Valor (use número positivo):
-          <input type="number" id="valor" step="0.01" required>
-        </label>
-
-        <label>
-          Tipo:
-          <select id="tipo" required>
-            <option value="ganho">Ganho</option>
-            <option value="gasto">Gasto</option>
-          </select>
-        </label>
-
-        <label>
-          Data:
-          <input type="date" id="data" required>
-        </label>
-
-        <button type="submit" class="btn-enviar">
-          ➕ Adicionar
-        </button>
-
-      </form>
-    </section>
-
-
-    <!-- ======== FILTROS ======== -->
-    <section class="filtros-transacoes">
-      <h3>Filtrar</h3>
-
-      <div class="filtros-flex">
-
-        <select id="filtroTipo">
-          <option value="tudo">Todos os tipos</option>
-          <option value="ganho">Ganhos</option>
-          <option value="gasto">Gastos</option>
-        </select>
-
-        <input type="month" id="filtroMes">
-
-        <button class="btn-filtrar" id="btnAplicarFiltro">Aplicar</button>
+      <div class="card card-large">
+        <h3>Transações Recentes</h3>
+        <div class="list">
+          <div class="tx-item">
+            <div class="meta">Salário • 01/12/2025</div>
+            <div class="value positive">+ R$ 2.500,00</div>
+          </div>
+          <div class="tx-item">
+            <div class="meta">Mercado • 02/12/2025</div>
+            <div class="value negative">- R$ 120,50</div>
+          </div>
+          <div class="tx-item">
+            <div class="meta">Transporte • 03/12/2025</div>
+            <div class="value negative">- R$ 59,90</div>
+          </div>
+        </div>
       </div>
     </section>
 
-
-    <!-- ======== LISTA ======== -->
-    <section class="lista-transacoes-box">
-      <h3>Transações Registradas</h3>
-
-      <ul id="listaTransacoes" class="lista-transacoes">
-        <!-- Itens serão adicionados pelo JS -->
-      </ul>
-    </section>
-
   </main>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
