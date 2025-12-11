@@ -1,39 +1,73 @@
-// Smooth scroll dos links do menu
-document.querySelectorAll("header nav ul li a").forEach(link => {
-  link.addEventListener("click", function(e) {
+// ------------------------------
+// Rolagem suave para links do menu
+// ------------------------------
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    target.scrollIntoView({ behavior: "smooth" });
+
+    const destino = document.querySelector(this.getAttribute('href'));
+    if (destino) {
+      destino.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
-// Simulação de saldo + atualização automática
-const saldoElement = document.getElementById("saldoTotal");
-if (saldoElement) {
-  let saldo = 1250.75;
 
-  function atualizarSaldo() {
-    saldoElement.textContent = "R$ " + saldo.toFixed(2).replace(".", ",");
+
+// ------------------------------
+// Botão "Começar Agora"
+// ------------------------------
+const btnPrincipal = document.querySelector('.btn-principal');
+btnPrincipal.addEventListener('click', () => {
+  document.querySelector('#recursos').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
+// ------------------------------
+// Efeito no menu ao rolar a página
+// ------------------------------
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+
+  if (window.scrollY > 50) {
+    header.classList.add('ativo');
+  } else {
+    header.classList.remove('ativo');
   }
+});
 
-  atualizarSaldo();
 
-  // Botão para adicionar valor fictício
-  const addBtn = document.getElementById("addValor");
-  if (addBtn) {
-    addBtn.addEventListener("click", () => {
-      saldo += 50;
-      atualizarSaldo();
-    });
-  }
-}
 
-// Formulário de contato — simulação
-const form = document.getElementById("formContato");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Mensagem enviada! Obrigado por entrar em contato 😊");
-    form.reset();
+// ------------------------------
+// Simulação de envio de formulário
+// ------------------------------
+const form = document.querySelector('.form-contato');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  alert("Mensagem enviada com sucesso! Obrigado por entrar em contato 🙂");
+  form.reset();
+});
+
+
+
+// ------------------------------
+// Animação de entrada dos cards
+// ------------------------------
+const cards = document.querySelectorAll('.card');
+
+function animarCards() {
+  cards.forEach(card => {
+    const pos = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (pos < windowHeight - 100) {
+      card.classList.add('aparecer');
+    }
   });
 }
+
+window.addEventListener('scroll', animarCards);
+animarCards();
